@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  blob-service:
+    build: ./blob.service
+    env_file:
+      - ./blob.service/.env
+      - ./.env
+
+    x-develop:
+      watch:
+        - path: ./
+          action: rebuild
+          ignore:
+            - node_modules/
+
+  nginx:
+    build: ./nginx
+    ports:
+      - "${NGINX_PORT}:${NGINX_PORT}"
+    env_file:
+      - ./.env
+
+    x-develop:
+      watch:
+        - path: ./ 
+          action: rebuild

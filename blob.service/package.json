@@ -1,0 +1,22 @@
+{
+  "name": "bna",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/main",
+  "scripts": {
+    "build": "tsc",
+    "start": "node ./dist/main",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "20.5.3",
+    "typescript": "5.1.6"
+  },
+  "dependencies": {
+    "@azure/identity": "3.3.0",
+    "@azure/storage-blob": "12.15.0"
+  }
+}

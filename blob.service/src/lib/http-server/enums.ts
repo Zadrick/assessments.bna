@@ -1,0 +1,25 @@
+export enum HTTP_METHODS {
+  GET = 'GET',
+  POST = 'POST',
+  PUT = 'PUT',
+  PATCH = 'PATCH',
+  DELETE = 'DELETE',
+}
+
+export enum STATUS_CODES {
+  OK = 200,
+  CREATED = 201,
+  ACCEPTED = 202,
+  
+  BAD_REQUEST = 400,
+  FORBIDDEN = 403,
+  NOT_FOUND = 404,
+  METHOD_NOT_ALLOWED = 405,
+  INTERNAL_SERVER_ERROR = 500,
+}
+
+export enum PATH_ELEMENTS {
+  RESOURCE_SEPARATOR = '/',
+  PATH_PARAM_SEPARATOR = ':',
+  ALL_PATH_RESOLVER = '*',
+}

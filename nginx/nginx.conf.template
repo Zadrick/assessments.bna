@@ -1,0 +1,17 @@
+events {
+  worker_connections  1024;
+}
+
+http {
+  ssl_certificate ./ssl/ssl-certificate.crt;
+  ssl_certificate_key ./ssl/ssl-certificate.key;
+
+  server {
+    listen ${NGINX_PORT} ssl;
+    server_name localhost;
+
+    location /blob/ {
+      proxy_pass http://blob-service:${BLOB_SERVICE_PORT}/;
+    }
+  }
+}
